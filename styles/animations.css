@@ -12,3 +12,62 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes menu-replay {
+    0% {
+        inset-inline-start: -20px;
+    }
+
+    100% {
+        inset-inline-start: -16px;
+    }
+}
+
+@keyframes heart-icon-scaling {
+    100% {
+        transform-origin: center;
+    }
+    from {
+        scale: 1;
+    }
+    50% {
+        scale: 1.25;
+    }
+    to {
+        scale: 1.5;
+    }
+}
+
+@keyframes core-repainting {
+    100% {
+        fill: var(--heart-core-fill);
+        transform-origin: center;
+    }
+}
+
+@keyframes main-body-repainting {
+    100% {
+        fill: var(--heart-main-body-fill);
+        transform-origin: center;
+    }
+}
+
+@keyframes contour-repainting {
+    100% {
+        fill: var(--heart-contour-fill);
+        transform-origin: center;
+    }
+}
+
+@keyframes sparks-repainting {
+    100% {
+        fill: var(--heart-sparks-fill);
+        transform-origin: center;
+    }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
