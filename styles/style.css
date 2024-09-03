@@ -36,8 +36,6 @@
   justify-content: center;
   border: 2px solid var(--border-color);
   max-width: var(--header-font-weight);
-  /*min-height: var(--header-font-height);
-  max-height: var(--header-font-height);*/
   margin: 0 auto 100px;
   background-color: var(--logo-color);
 }
@@ -201,6 +199,26 @@
   line-height: 14px;
   mix-blend-mode: hard-light;
   z-index: 100;
+  text-shadow:
+    1px 0 0 var(--border-label),
+    1px 0 0 var(--border-label),
+    0 1px 0 var(--border-label),
+    0 1px 0 var(--border-label),
+    -1px 0 0 var(--border-label),
+    -1px 0 0 var(--border-label),
+    0 -1px 0 var(--border-label),
+    0 -1px 0 var(--border-label);
+}
+
+@supports (
+  (text-stroke: 1px var(--border-label))
+  or
+  (-webkit-text-stroke: 1px var(--border-label))
+) {
+  .card__image-text {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--border-label)
+  }
 }
 
 .card__container {
@@ -286,6 +304,11 @@
 }
 
 .like-icon {
+  width: 39px;
+  height: 36px;
+  cursor: pointer;
+  color: var(--text-color);
+
   .contour {
     fill: var(--text-color);
     transition: fill 0.1s linear;
@@ -334,13 +357,13 @@
   }
 }
 
-/* Картинка сердца */
+/* Картинка сердца 
 .like-icon {
   width: 39px;
   height: 36px;
   cursor: pointer;
   color: var(--text-color);
-}
+}*/
 
 /* Анимация сердца */
 .sparks {
@@ -388,7 +411,7 @@
 }
 
 /* Иконка floppy*/
-.footer__button-icon{
+.footer__button-icon {
   max-width: 21px;
   height: auto;
   color: var(--button-content-color);
@@ -504,9 +527,8 @@
 .filter__invert {
   filter: invert(0.8);
 }
-
-.filter__gray {
-  filter: grayscale(0.8);
+.filter__multiple {
+  filter: hue-rotate(110deg) opacity(0.6) brightness(90%);
 }
 
 .filter__blur {
@@ -514,13 +536,13 @@
   z-index: 0;
 }
 
-.filter__multiple {
-  filter: hue-rotate(110deg) opacity(0.6) brightness(90%);
+.filter__gray {
+  filter: grayscale(0.8);
 }
 
 
 @media (width <= 375px) {
-  .header{
+  .header {
    max-height: 327px;
   }
 
