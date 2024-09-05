@@ -25,7 +25,7 @@
   max-inline-size: 850px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font), "Arial", sans-serif;
+  font-family: var(--main-font), Arial, sans-serif;
   font-variation-settings: "wght" var(--header-font-weight), "wdth" 100,
     "opsz" 0;
   background-color: var(--bg-color);
@@ -54,7 +54,7 @@
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
-  font-family: var(--accent-font), "fantasy", sans-serif;
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-weight: var(--main-font-weight);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 23px;
@@ -67,7 +67,7 @@
   display: flex;
   align-items: flex-end;
   text-transform: uppercase;
-  font-family: var(--accent-font), "fantasy", sans-serif;
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-weight: var(--main-font-weight);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 65px;
@@ -88,55 +88,53 @@
 }
 
 .theme-menu__button {
+  padding: 0;
   position: relative;
   text-transform: uppercase;
-  font-family: var(--accent-font), "fantasy", sans-serif;
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
   line-height: 14px;
   background-color: transparent;
   border-style: none;
   cursor: pointer;
-  transition: color 0.3s;
-  transition-timing-function: ease;
+  transition: 0.3s ease;
+  outline: none;
+  border: none;
 }
 
 .theme-menu__button::after {
   content: "";
   position: absolute;
+  display: block;
+  background-color: var(--border-color);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0%);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .theme-menu__button:hover {
   opacity: 0.6;
 }
 
-.theme-menu__button:hover::after {
-  transform: scaleX(1);
-}
-
 .theme-menu__button:focus {
   outline: none;
-  border: none;
-  transform: scaleX(1);
   opacity: 0.6;
-  text-decoration: underline;
+  transform: scaleX(100%);
 }
 
 .theme-menu__button:focus::after {
-  background-color: var(--border-color);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-  transform: scaleX(0);
+  transform: scaleX(100%);
 }
 
 .theme-menu__button:focus-visible {
   opacity: 0.6;
   outline: none;
-  border: none;
   color: var(--border-color);
-}
-
-.theme-menu__button:focus-visible::after {
-  transform: scaleX(1);
+  transform: scaleX(100%);
 }
 
 .theme-menu__button:disabled {
@@ -149,7 +147,8 @@
   content: "▶";
   position: absolute;
   animation: menu-replay 0.5s infinite ease-in-out alternate-reverse;
-  inset-inline-start: -20px;
+  top: 2px;
+  left: -20px;
 }
 
 .main {
@@ -169,7 +168,7 @@
 
 .card__title {
   padding: 3.5px 10px;
-  font-family: var(--main-font), "Arial", sans-serif;
+  font-family: var(--main-font), Arial, sans-serif;
   font-variation-settings: "wght" var(--header-font-weight), "wdth" 100,
     "opsz" 0;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
@@ -204,7 +203,7 @@
   position: absolute;
   opacity: 0.5;
   color: var(--text-color);
-  font-family: var(--accent-font), "fantasy", sans-serif;
+  font-family: var(--accent-font), fantasy, sans-serif;
   -webkit-text-stroke: 1px var(--border-label);
   font-weight: var(--main-font-weight);
   font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
@@ -241,7 +240,7 @@
 }
 
 .card__text {
-  font-family: var(--main-font), "Arial", sans-serif;
+  font-family: var(--main-font), Arial, sans-serif;
   font-variation-settings: "wght" var(--main-font-weight), "wdth" 100, "opsz" 0;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 21px;
@@ -253,7 +252,6 @@
   display: flex;
   align-self: flex-end;
   justify-content: center;
-  align-items: center;
   gap: 2px;
 }
 
@@ -280,8 +278,6 @@
 
 /* Картинка сердца */
 .like-icon {
-  width: 39px;
-  height: 36px;
   cursor: pointer;
   color: var(--text-color);
 }
@@ -292,14 +288,14 @@
 
 /* Кнопка Like */
 .card__like-button {
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   padding: 10px 0;
   inline-size: 130px;
 }
 
 /* Текст кнопки Like и кнопки Сохранить на память */
 .button__text {
-  font-family: var(--accent-font), "fantasy", sans-serif;
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-weight: var(--main-font-weight);
   font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
   line-height: 90%;
@@ -378,7 +374,7 @@
   background-color: var(--bg-color);
   border: 2px solid var(--border-color);
   color: var(--text-color);
-  font-family: var(--accent-font), "fantasy", sans-serif;
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-weight: var(--main-font-weight);
   font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
   text-transform: uppercase;
@@ -388,9 +384,9 @@
 
 .dialog__form {
   margin: 30px;
+  padding: 0 5px;
   display: grid;
   grid-template-columns: auto 1fr;
-  width: 293px;
   gap: 20px;
 }
 
