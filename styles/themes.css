@@ -6,108 +6,123 @@
 */
 
 :root.theme-light {
-    --main-font: 'Inter-Variable';
-    --main-font-weight: 400px;
-    --header-font-weight: 700px;
-    --header-font-height: 323px;
-    --card-font-weight: 696px;
-    --footer-font-weight: 337px;
-    --accent-font: 'PressStart2P-Regular';
-    --bg-color: rgb(250,250,250);
-    --bg-gradient: 
-        repeating-linear-gradient(to right, #d3d3d3, rgb(244 152 173 / 0) 2px),
-        repeating-linear-gradient( #d3d3d3, rgb(244 152 173 / 0) 2px),
-        linear-gradient(to bottom,#e7e7e7, #1a1a1a);
-    --text-color: #000000;
-    --logo-color: rgb(250,250,250);
-    --border-color: #000;
-    --border-label: #fff;
-    --button-content-color: #fff;
-    --heart-sparks-fill: #FF0000;
+  --main-font: "Inter-Variable";
+  --main-font-weight: 400;
+  --header-font-weight: 700;
+  --header-card-width: 700px; /* --header-font-weight */
+  --header-card-height: 323px; /* --header-font-height */
+  --card-width: 696px; /* --card-font-weight */
+  --last-card-width: 337px; /* --footer-font-weight */
+  --accent-font: "PressStart2P-Regular";
+  --bg-color: rgb(250, 250, 250);
+  --bg-gradient: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0 2px,
+      rgb(0 0 0/ 0) 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0/0) 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+  --text-color: #000000;
+  --logo-color: rgb(250, 250, 250);
+  --border-color: #000;
+  --border-label: #fff;
+  --button-content-color: #fff;
+  --heart-sparks-fill: #ff0000;
+  --heart-sparks-fill-transparent: rgb(255 0 0 / 0%);
+  --heart-color: #000;
+  --herat-core-fill: #f00;
+  --herat-core-fill-transparent: rgb(255 0 0 / 0%);
+  --heart-main-body-fill: #f00;
+  --heart-main-body-fill-transparent: rgb(255 0 0 / 0%);
+  --heart-contour-fill: #f00;
+}
+
+:root.theme-dark {
+  --main-font: "Inter-Variable";
+  --main-font-weight: 465;
+  --header-font-weight: 785;
+  --header-card-width: 700px;
+  --header-card-height: 368px;
+  --card-width: 696px;
+  --last-card-width: 335px;
+  --accent-font: "PressStart2P-Regular";
+  --bg-color: #000000;
+  --bg-gradient: repeating-linear-gradient(
+      90deg,
+      #000 0px 2px,
+      rgba(0, 0, 0/ 0) 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #000 0px 2px, rgb(0, 0, 0, 0) 2px 4px),
+    linear-gradient(180deg, #007f0c 0%, #004306 100%);
+  --text-color: #00cc14;
+  --logo-color: #000000;
+  --border-color: #00cc14;
+  --border-label: #000;
+  --button-content-color: #00cc14;
+  --heart-sparks-fill: #ff0000;
+  --heart-sparks-fill-transparent: rgb(255 0 0 / 0%);
+  --heart-color: #00cc14;
+  --herat-core-fill: #f00;
+  --herat-core-fill-transparent: rgb(255 0 0 / 0%);
+  --heart-main-body-fill: #f00;
+  --heart-main-body-fill-transparent: rgb(255 0 0 / 0%);
+  --heart-contour-fill: #f00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font: "Inter-Variable";
+    --main-font-weight: 465;
+    --header-font-weight: 785;
+    --header-card-width: 700px;
+    --header-card-height: 368px;
+    --card-width: 696px;
+    --last-card-width: 335px;
+    --accent-font: "PressStart2P-Regular";
+    --bg-color: #000000;
+    --bg-gradient: repeating-linear-gradient(
+        90deg,
+        #000 0px 2px,
+        rgba(0, 0, 0/ 0) 2px 4px
+      ),
+      repeating-linear-gradient(180deg, #000 0px 2px, rgb(0, 0, 0, 0) 2px 4px),
+      linear-gradient(180deg, #007f0c 0%, #004306 100%);
+    --text-color: #00cc14;
+    --logo-color: #000000;
+    --border-color: #00cc14;
+    --border-label: #000;
+    --button-content-color: #00cc14;
+    --heart-sparks-fill: #ff0000;
     --heart-sparks-fill-transparent: rgb(255 0 0 / 0%);
-    --heart-color: #000;
+    --heart-color: #00cc14;
     --herat-core-fill: #f00;
     --herat-core-fill-transparent: rgb(255 0 0 / 0%);
     --heart-main-body-fill: #f00;
     --heart-main-body-fill-transparent: rgb(255 0 0 / 0%);
-    --heart-contour-fill:#f00;
+    --heart-contour-fill: #f00;
+  }
 }
 
-:root.theme-dark {
-    --main-font: 'Inter-Variable';
-    --main-font-weight: 465px;
-    --header-font-weight: 700px;
-    --header-font-height: 368px;
-    --card-font-weight: 696px;
-    --footer-font-weight: 335px;
-    --accent-font: 'PressStart2P-Regular';
-    --bg-color: #000000;
-    --bg-gradient: 
-        repeating-linear-gradient(to right, #000, rgb(244 152 173 / 0) 2px),
-        repeating-linear-gradient( #000, rgb(244 152 173 / 0) 2px),
-        linear-gradient(to bottom,#007F0C, #004306);
-    --text-color: #00CC14;
-    --logo-color: #000000;
-    --border-color: #00CC14;
-    --border-label: #000;
-    --button-content-color: #00CC14;
-    --heart-sparks-fill: #FF0000;
-    --heart-sparks-fill-transparent: rgb(255 0 0 / 0%);
-    --heart-color: #00CC14;
-    --herat-core-fill: #f00;
-    --herat-core-fill-transparent:rgb(255 0 0 / 0%);
-    --heart-main-body-fill: #f00;
-    --heart-main-body-fill-transparent: rgb(255 0 0 / 0%);
-    --heart-contour-fill:#f00;
-}
-
-
-@media (prefers-color-scheme: dark) {
-    :root {
-    --main-font: 'Inter-Variable';
-    --main-font-weight: 465px;
-    --header-font-weight: 700px;
-    --header-font-height: 368px;
-    --card-font-weight: 696px;
-    --footer-font-weight: 335px;
-    --accent-font: 'PressStart2P-Regular';
-    --bg-color: #000000;
-    --bg-gradient: 
-        repeating-linear-gradient(to right, #000, rgb(244 152 173 / 0) 2px),
-        repeating-linear-gradient( #000, rgb(244 152 173 / 0) 2px),
-        linear-gradient(to bottom,#007F0C, #004306);
-    --text-color: #00CC14;
-    --logo-color: #000000;
-    --border-color: #00CC14;
-    --border-label: #000;
-    --button-content-color: #00CC14;
-    --heart-sparks-fill: #FF0000;
-    --heart-sparks-fill-transparent: rgb(255 0 0 / 0%);
-    --heart-color: #00CC14;
-    --herat-core-fill: #f00;
-    --herat-core-fill-transparent:rgb(255 0 0 / 0%);
-    --heart-main-body-fill: #f00;
-    --heart-main-body-fill-transparent: rgb(255 0 0 / 0%);
-    --heart-contour-fill:#f00;
-    }
-}
-
-@media(prefers-color-scheme: light) {
-    :root {
-    --main-font: 'Inter-Variable';
-    --main-font-weight: 400px;
-    --header-font-weight: 700px;
-    --header-font-height: 364px;
-    --card-font-weight: 696px;
-    --footer-font-weight: 335px;
-    --accent-font: 'PressStart2P-Regular';
-    --bg-color: rgb(250,250,250);
-    --bg-gradient: 
-        repeating-linear-gradient(to right, #d3d3d3, rgb(244 152 173 / 0) 2px),
-        repeating-linear-gradient( #d3d3d3, rgb(244 152 173 / 0) 2px),
-        linear-gradient(to bottom,#e7e7e7, #1a1a1a);
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-font: "Inter-Variable";
+    --main-font-weight: 400;
+    --header-font-weight: 700;
+    --header-card-width: 700px;
+    --header-card-height: 364px;
+    --card-width: 696px;
+    --last-card-width: 335px;
+    --accent-font: "PressStart2P-Regular";
+    --bg-color: rgb(250, 250, 250);
+    --bg-gradient: repeating-linear-gradient(
+        90deg,
+        #d3d3d3 0 2px,
+        rgb(0 0 0/ 0) 2px 4px
+      ),
+      repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0/0) 2px 4px),
+      linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
     --text-color: #000000;
-    --logo-color: rgb(250,250,250);
+    --logo-color: rgb(250, 250, 250);
     --border-color: #000;
     --border-label: #fff;
     --button-content-color: #fff;
@@ -115,9 +130,9 @@
     --heart-sparks-fill-transparent: rgb(255 0 0 / 0%);
     --heart-color: #000;
     --herat-core-fill: #f00;
-    --herat-core-fill-transparent:rgb(255 0 0 / 0%);
+    --herat-core-fill-transparent: rgb(255 0 0 / 0%);
     --heart-main-body-fill: #f00;
     --heart-main-body-fill-transparent: rgb(255 0 0 / 0%);
-    --heart-contour-fill:#f00;
-    }
+    --heart-contour-fill: #f00;
+  }
 }

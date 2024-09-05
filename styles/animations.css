@@ -13,61 +13,110 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+/* Анимация - стрелочка-указатель меню */
 @keyframes menu-replay {
     0% {
-        inset-inline-start: -20px;
+        transform: translateX(0);
     }
 
     100% {
-        inset-inline-start: -16px;
+        transform: translateX(4px);
     }
 }
 
-@keyframes heart-icon-scaling {
-    100% {
-        transform-origin: center;
+/* Анимация сердца - на старте */
+.like-icon .core {
+    fill: var(--herat-core-fill-transparent);
+    transition: fill 0.3s linear;
+    transition-delay: 0.03s;
+}
+
+.like-icon .main-body {
+    fill: var(--heart-main-body-fill-transparent);
+    transition: fill 0.3s linear;
+}
+
+.like-icon .contour {
+    fill: var(--heart-color);
+    transition: fill 0.1s linear;
+}
+
+  /* Анимация сердца - :hover */
+  .like-icon:hover .core {
+    fill: var(--heart-color);
+    transition: fill 0.3s linear;
+  }
+
+  .like-icon:hover .main-body {
+    fill: var(--heart-color);
+    transition: fill 0.3s linear;
+    transition-delay: 0.05s;
+  }
+
+/* Анимация сердца - :active */
+.like-icon:active .main-body {
+    fill: var(--heart-main-body-fill);
+    transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .core {
+    fill: var(--herat-core-fill);
+    transition: fill 0.3s linear; 
+}
+
+/* Анимация сердца - состояние liked */
+.like-icon.is-liked .core {
+    fill: var(--herat-core-fill);
+    animation: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+    fill: var(--heart-main-body-fill);
+    animation: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .contour {
+    fill: var(--heart-contour-fill);
+    animation: fill 0.3s 0.06s linear;
+}
+
+.like-icon.is-liked .heart {
+    animation: like 0.3s linear 0.1s 1;
+    transform-origin: center;
+    animation-direction: alternate;
+}
+
+.like-icon.is-liked .sparks {
+    animation: sparks-repainting 0.3s linear 0.3s 1;
+    animation-direction: alternate;
+}
+
+@keyframes like {
+    0% {
+        transform: scale(1);
     }
-    from {
-        scale: 1;
-    }
+
     50% {
-        scale: 1.25;
+        transform: scale(1.2);
     }
-    to {
-        scale: 1.5;
-    }
-}
 
-@keyframes core-repainting {
     100% {
-        fill: var(--heart-core-fill);
-        transform-origin: center;
-    }
-}
-
-@keyframes main-body-repainting {
-    100% {
-        fill: var(--heart-main-body-fill);
-        transform-origin: center;
-    }
-}
-
-@keyframes contour-repainting {
-    100% {
-        fill: var(--heart-contour-fill);
-        transform-origin: center;
+        transform: scale(1);
     }
 }
 
 @keyframes sparks-repainting {
-    100% {
-        fill: var(--heart-sparks-fill);
-        transform-origin: center;
-    }
-    from {
+    0% {
         opacity: 0;
     }
-    to {
+
+    50% {
         opacity: 1;
     }
+
+    100% {
+        opacity: 0;
+    }
 }
+
+
