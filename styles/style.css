@@ -123,7 +123,7 @@
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
-  transform: scaleX(100%);
+  /*transform: scaleX(100%);*/
 }
 
 .theme-menu__button:focus::after {
@@ -133,8 +133,8 @@
 .theme-menu__button:focus-visible {
   opacity: 0.6;
   outline: none;
-  color: var(--border-color);
-  transform: scaleX(100%);
+  /*color: var(--border-color);
+  transform: scaleX(100%);*/
 }
 
 .theme-menu__button:disabled {
